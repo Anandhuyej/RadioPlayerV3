@@ -99,7 +99,7 @@ async def yplay(_, message: Message):
     group_call = mp.group_call
     if type=="audio":
         if round(m_audio.audio.duration / 60) > DURATION_LIMIT:
-            d=await message.reply_text(f"❌ __Audios Longer Than {DURATION_LIMIT} Minute(s) Aren't Allowed, The Provided Audio Is {round(m_audio.audio.duration/60)} Minute(s)!__")
+            d=await message.reply_text(f"❌ __sorry buddy your song duration i s {DURATION_LIMIT} Minute(s) Aren't Allowed, The Provided Audio Is {round(m_audio.audio.duration/60)} Minute(s)!__")
             await mp.delete(d)
             await mp.delete(message)
             return
@@ -200,7 +200,7 @@ async def yplay(_, message: Message):
         duration = round(info["duration"] / 60)
         title= info["title"]
         if int(duration) > DURATION_LIMIT:
-            k=await message.reply_text(f"❌ __Videos Longer Than {DURATION_LIMIT} Minute(s) Aren't Allowed, The Provided Video Is {duration} Minute(s)!__")
+            k=await message.reply_text(f"❌ __sorry buddy your song duration i s{DURATION_LIMIT} Minute(s) Aren't Allowed, The Provided Video Is {duration} Minute(s)!__")
             await mp.delete(k)
             await mp.delete(message)
             return
